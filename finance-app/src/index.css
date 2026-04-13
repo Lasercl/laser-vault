@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Kita pertahankan variabel warna lu, tapi kita bersihkan logic font-nya */
+  --bg: #0a0f14;
+  --text: #ffffff;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* HAPUS SEMUA ISI #root LAMA LU. 
+   Ganti dengan ini biar Tailwind Grid di App.jsx bisa jalan normal.
+*/
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Paksa rata kiri, jangan center! */
+  display: block;   /* Biar grid tidak bertumpuk sate */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0f14; /* Background dasar aplikasi */
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Reset font-font bawaan Vite yang bikin kaku */
+h1 {
+  all: unset; /* Hapus gaya h1 bawaan yang ukurannya kegedean */
+}
+
+/* Biar scrollbar-nya keren ala Engineer */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
